@@ -83,7 +83,8 @@
       <!-- tweetbox ends -->
 
       <?php 
-        for ($i=0; $i<5; $i++):
+        foreach ($tweets as $tweet):
+          
             
       ?>
       <!-- post starts -->
@@ -99,14 +100,16 @@
           <div class="post__header">
             <div class="post__headerText">
               <h3>
-                Somanath Goudar
+               <?php
+                  echo $tweet['autor'];
+               ?>
                 <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span>@somanathg</span
+                  ><span class="material-icons post__badge"> verified </span>@<?php  echo $tweet['username'];?></span
                 >
               </h3>
             </div>
             <div class="post__headerDescription">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p><?php  echo $tweet['texto'];?></p>
             </div>
           </div>
           <img
@@ -123,7 +126,7 @@
       <!-- post ends -->
         
       <?php
-        endfor;
+        endforeach;
         ?>
     
 
