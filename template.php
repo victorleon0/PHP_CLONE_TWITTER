@@ -83,7 +83,7 @@
       <!-- tweetbox ends -->
 
       <?php 
-        foreach ($tweets as $tweet):
+        foreach ($arraytweets['tweets'] as $tweet):
           
             
       ?>
